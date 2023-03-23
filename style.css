@@ -1,0 +1,15 @@
+html,
+body {
+    margin: 20px;
+    height: calc(100% - 40px);
+    background-color: #266352;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: solid 5px #F7DB6A;
+    background: #53c0a2;
+}
