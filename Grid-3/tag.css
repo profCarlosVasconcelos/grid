@@ -1,0 +1,57 @@
+/*Remover padding e margin de todos os elementos*/
+/*Vai ocupar a tela inteira*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*Para cada dos elemento vamos dar um nome "LABEL" para o valor da propriedade*/
+
+header {
+    border: solid 3px cornflowerblue;
+    grid-area: cabecalho;
+}
+
+nav {
+    border: solid 3px cornflowerblue;
+    grid-area: navegacao;
+}
+
+main {
+    border: solid 3px cornflowerblue;
+    grid-area: conteudo;
+}
+
+footer {
+    border: solid 3px cornflowerblue;
+    grid-area: rodape;
+}
+
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    background-color: blanchedalmond;
+
+    /*A partir daqui, vamos organizar os elementos na tela*/
+    grid-template-areas:
+        'cabecalho cabecalho'
+        'navegacao conteudo'
+        'rodape rodape';
+}
+
+/*Aplicando responsividade para dispositivos mobile*/
+@media(max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 80px 1fr 100px;
+        grid-template-areas:
+            'cabecalho'
+            'navegacao'
+            'conteudo'
+            'rodape';
+
+    }
+}
